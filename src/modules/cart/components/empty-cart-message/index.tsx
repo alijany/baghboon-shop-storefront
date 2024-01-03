@@ -11,7 +11,7 @@ const EmptyCartMessage = () => {
         سبد خرید
       </Heading>
       <Text className="text-base-regular mt-4 mb-6 max-w-[32rem]">
-        چیزی در سبد خرید ندارید. برای مشاهده محصولات روی لینک زید کلیک کنید
+        چیزی در سبد خرید ندارید. برای مشاهده محصولات روی لینک زیر کلیک کنید
       </Text>
       <div>
         <UnderlineLink href="/store">مشاهده محصولات</UnderlineLink>

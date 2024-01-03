@@ -29,7 +29,7 @@ const Review = () => {
             }
           )}
         >
-          Review
+          بازبینی
         </Heading>
       </div>
       {!editingOtherSteps && previousStepsCompleted && (
@@ -37,10 +37,10 @@ const Review = () => {
           <div className="flex items-start gap-x-1 w-full mb-6">
             <div className="w-full">
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                By clicking the Place Order button, you confirm that you have
-                read, understand and accept our Terms of Use, Terms of Sale and
-                Returns Policy and acknowledge that you have read Medusa
-                Store&apos;s Privacy Policy.
+                با کلیک بر روی دکمه شرایط خرید، شما تأیید می کنید که قوانین
+                استفاده، قوانین فروش و سیاست مرجوعی را خوانده، درک کرده و
+                پذیرفته اید و تأیید می کنید که شما سیاست حریم خصوصی فروشگاه
+                باغبون شاپ را خوانده اید.
               </Text>
             </div>
           </div>

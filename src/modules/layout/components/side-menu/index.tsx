@@ -6,11 +6,11 @@ import { Text, clx, useToggleState } from "@medusajs/ui"
 import CountrySelect from "../country-select"
 
 const SideMenuItems = {
-  Home: "/",
-  Store: "/store",
-  Search: "",
-  Account: "/account",
-  Cart: "/cart",
+  "خانه": "/",
+  "فروشگاه": "/store",
+  "جستجو": "",
+  "حساب کاربری": "/account",
+  "سبد خرید": "/cart",
 }
 
 const SideMenu = ({ searchModalOpen }: { searchModalOpen: () => void }) => {
@@ -29,7 +29,7 @@ const SideMenu = ({ searchModalOpen }: { searchModalOpen: () => void }) => {
             <>
               <div className="relative flex h-full">
                 <Popover.Button className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base">
-                  Menu
+                  منو
                 </Popover.Button>
               </div>
 
@@ -53,7 +53,7 @@ const SideMenu = ({ searchModalOpen }: { searchModalOpen: () => void }) => {
                     <ul className="flex flex-col gap-6 items-start justify-start">
                       {Object.entries(SideMenuItems).map(([name, href]) => {
                         if (
-                          name === "Search" &&
+                          name === "جستجو کردن" &&
                           process.env.FEATURE_SEARCH_ENABLED
                         ) {
                           return (
@@ -95,8 +95,8 @@ const SideMenu = ({ searchModalOpen }: { searchModalOpen: () => void }) => {
                         />
                       </div>
                       <Text className="flex justify-between txt-compact-small">
-                        © {new Date().getFullYear()} Medusa Store. All rights
-                        reserved.
+                        © {new Date().getFullYear()} باغبون شاپ. تمام حقوق
+                        محفوظ است
                       </Text>
                     </div>
                   </div>

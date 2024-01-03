@@ -36,7 +36,7 @@ const Nav = () => {
               href="/"
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
             >
-              Medusa Store
+              باغبون شاپ
             </Link>
           </div>
 
@@ -50,7 +50,7 @@ const Nav = () => {
                 />
               )}
               <Link className="hover:text-ui-fg-base" href="/account">
-                Account
+                حساب کاربری
               </Link>
             </div>
             <CartDropdown />

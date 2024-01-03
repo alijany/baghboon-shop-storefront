@@ -21,7 +21,7 @@ export type NativeSelectProps = {
 const CartItemSelect = forwardRef<HTMLSelectElement, NativeSelectProps>(
   (
     {
-      placeholder = "Select...",
+      placeholder = "انتخاب...",
       errors,
       touched,
       className,

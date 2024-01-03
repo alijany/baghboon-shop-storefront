@@ -113,7 +113,7 @@ const CardNumber = ({
   return (
     <div className="py-2 relative">
       <span className="flex items-center gap-x-1 absolute -top-6 txt-medium text-ui-fg-base">
-        Card number
+        شماره کارت
         {state.cardNumberComplete && <CheckCircleMiniSolid />}
       </span>
       <CardNumberElement options={options} onChange={handleChange} />
@@ -168,7 +168,7 @@ const CardExpiry = ({
   return (
     <div className="w-full py-2 relative">
       <span className="flex items-center gap-x-1 absolute -top-6 txt-medium text-ui-fg-base">
-        Expiration date
+        تاریخ انقضا
         {state.cardExpiryComplete && <CheckCircleMiniSolid />}
       </span>
       <CardExpiryElement options={options} onChange={handleChange} />
@@ -223,7 +223,7 @@ const CardCVC = ({
   return (
     <div className="w-full py-2 relative">
       <span className="flex items-center gap-x-1 absolute -top-6 txt-medium text-ui-fg-base">
-        CVC
+        کد CVC
         {state.cardCvcComplete && <CheckCircleMiniSolid />}
       </span>
       <CardCvcElement

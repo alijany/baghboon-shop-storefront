@@ -30,13 +30,13 @@ const Addresses = () => {
           level="h2"
           className="flex flex-row text-3xl-regular gap-x-2 items-baseline"
         >
-          Address
+          آدرس
           {!isOpen && <CheckCircleSolid />}
         </Heading>
         {!isOpen && (
           <Text>
             <button onClick={handleEdit} className="text-ui-fg-interactive">
-              Edit
+              ویرایش
             </button>
           </Text>
         )}
@@ -51,7 +51,7 @@ const Addresses = () => {
                 level="h2"
                 className="text-3xl-regular gap-x-4 pb-6 pt-8"
               >
-                Billing address
+                آدرس صورت حساب
               </Heading>
 
               <BillingAddress />
@@ -63,7 +63,7 @@ const Addresses = () => {
             className="mt-6"
             onClick={handleSubmit(setAddresses)}
           >
-            Continue to delivery
+            رفتن به ارسال کالا
           </Button>
         </div>
       ) : (
@@ -74,7 +74,7 @@ const Addresses = () => {
                 <div className="flex items-start gap-x-1 w-full">
                   <div className="flex flex-col w-1/3">
                     <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                      Shipping Address
+                      آدرس تحویل گیرنده
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
                       {cart.shipping_address.first_name}{" "}
@@ -95,7 +95,7 @@ const Addresses = () => {
 
                   <div className="flex flex-col w-1/3 ">
                     <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                      Contact
+                      تماس
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
                       {cart.shipping_address.phone}
@@ -107,12 +107,12 @@ const Addresses = () => {
 
                   <div className="flex flex-col w-1/3">
                     <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                      Billing Address
+                     آدرس صورتحساب
                     </Text>
 
                     {checked ? (
                       <Text className="txt-medium text-ui-fg-subtle">
-                        Billing- and delivery address are the same.
+                       صورتحساب- و آدرس تحویل یکسان است.
                       </Text>
                     ) : (
                       <>

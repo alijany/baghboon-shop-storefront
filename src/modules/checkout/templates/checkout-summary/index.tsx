@@ -22,7 +22,7 @@ const CheckoutSummary = () => {
           level="h2"
           className="flex flex-row text-3xl-regular items-baseline"
         >
-          In your Cart
+          در سبد خرید شما
         </Heading>
         <Divider className="my-6" />
         <CartTotals data={cart} />

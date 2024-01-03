@@ -82,10 +82,10 @@ const ProductActionsInner: React.FC<ProductActionsProps> = ({ product }) => {
         className="w-full h-10"
       >
         {!inStock
-          ? "Out of stock"
+          ? "تمام شده"
           : !variant
-          ? "Select variant"
-          : "Add to cart"}
+          ? "نوع را انتخاب کنید"
+          : "به سبد خرید اضافه کنید"}
       </Button>
     </div>
   )

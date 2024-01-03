@@ -16,11 +16,11 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
   const tabs = useMemo(() => {
     return [
       {
-        label: "Product Information",
+        label: "اطلاعات محصول",
         component: <ProductInfoTab product={product} />,
       },
       {
-        label: "Shipping & Returns",
+        label: "ارسال و مرجوعی",
         component: <ShippingInfoTab />,
       },
     ]

@@ -22,7 +22,7 @@ const ShippingAddress = ({
       {customer && (customer.shipping_addresses?.length || 0) > 0 && (
         <Container className="mb-6 flex flex-col gap-y-4 p-5">
           <p className="text-small-regular">
-            {`Hi ${customer.first_name}, do you want to use one of your saved addresses?`}
+            {`سلام ${customer.first_name}, آیا می خواهید از یکی از آدرس های ذخیره شده خود استفاده کنید?`}
           </p>
           <AddressSelect addresses={customer.shipping_addresses} />
         </Container>
@@ -32,9 +32,9 @@ const ShippingAddress = ({
           <>
             <div className="grid grid-cols-2 gap-4">
               <Input
-                label="First name"
+                label="نام"
                 {...register("shipping_address.first_name", {
-                  required: "First name is required",
+                  required: "نام اجباری است",
                 })}
                 autoComplete="given-name"
                 errors={errors}
@@ -42,9 +42,9 @@ const ShippingAddress = ({
                 required
               />
               <Input
-                label="Last name"
+                label="نام خانوادگی"
                 {...register("shipping_address.last_name", {
-                  required: "Last name is required",
+                  required: "نام خانوادگی اجباری است",
                 })}
                 autoComplete="family-name"
                 errors={errors}
@@ -52,9 +52,9 @@ const ShippingAddress = ({
                 required
               />
               <Input
-                label="Address"
+                label="آدرس"
                 {...register("shipping_address.address_1", {
-                  required: "Address is required",
+                  required: "آدرس اجباری است",
                 })}
                 autoComplete="address-line1"
                 errors={errors}
@@ -62,16 +62,16 @@ const ShippingAddress = ({
                 required
               />
               <Input
-                label="Company"
+                label="شرکت"
                 {...register("shipping_address.company")}
                 autoComplete="organization"
                 errors={errors}
                 touched={touchedFields}
               />
               <Input
-                label="Postal code"
+                label="کد پستی"
                 {...register("shipping_address.postal_code", {
-                  required: "Postal code is required",
+                  required: "کد پستی اجباری است",
                 })}
                 autoComplete="postal-code"
                 errors={errors}
@@ -79,9 +79,9 @@ const ShippingAddress = ({
                 required
               />
               <Input
-                label="City"
+                label="شهر"
                 {...register("shipping_address.city", {
-                  required: "City is required",
+                  required: "شهر اچباری است",
                 })}
                 autoComplete="address-level2"
                 errors={errors}
@@ -90,7 +90,7 @@ const ShippingAddress = ({
               />
               <CountrySelect
                 {...register("shipping_address.country_code", {
-                  required: "Country is required",
+                  required: "کشور اجباری است",
                 })}
                 autoComplete="country"
                 errors={errors}
@@ -98,7 +98,7 @@ const ShippingAddress = ({
                 required
               />
               <Input
-                label="State / Province"
+                label="شهر / استان"
                 {...register("shipping_address.province")}
                 autoComplete="address-level1"
                 errors={errors}
@@ -107,16 +107,16 @@ const ShippingAddress = ({
             </div>
             <div className="my-8">
               <Checkbox
-                label="Same as billing address"
+                label="مشابه آدرس صورت حساب"
                 checked={checked}
                 onChange={onChange}
               />
             </div>
             <div className="grid grid-cols-2 gap-4 mb-4">
               <Input
-                label="Email"
+                label="پست الکترونیک"
                 {...register("email", {
-                  required: "Email is required",
+                  required: "پست الکترونیک اجباری است",
                   pattern: emailRegex,
                 })}
                 autoComplete="email"
@@ -125,7 +125,7 @@ const ShippingAddress = ({
                 required
               />
               <Input
-                label="Phone"
+                label="شماره تماس"
                 {...register("shipping_address.phone")}
                 autoComplete="tel"
                 errors={errors}

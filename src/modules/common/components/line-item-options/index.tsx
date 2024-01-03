@@ -9,7 +9,7 @@ const LineItemOptions = ({ variant }: LineItemOptionsProps) => {
       {variant.options?.map((option) => {
         const optionName =
           variant.product.options.find((opt) => opt.id === option.option_id)
-            ?.title || "Option"
+            ?.title || "گزینه"
         return (
           <Text key={option.id} className="txt-medium text-ui-fg-subtle">
             {optionName}: {option.value}

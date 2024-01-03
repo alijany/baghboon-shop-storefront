@@ -27,7 +27,7 @@ const SearchResultsTemplate = ({ query, hits }: SearchResultsTemplateProps) => {
     <div>
       <div className="flex justify-between border-b w-full py-6 px-8 small:px-14 items-center">
         <div className="flex flex-col items-start">
-          <Text className="text-ui-fg-muted">Search Results for:</Text>
+          <Text className="text-ui-fg-muted">نتایج جستجو برای:</Text>
           <Heading>
             {query} ({hits.length})
           </Heading>
@@ -36,7 +36,7 @@ const SearchResultsTemplate = ({ query, hits }: SearchResultsTemplateProps) => {
           href="/store"
           className="txt-medium text-ui-fg-subtle hover:text-ui-fg-base"
         >
-          Clear
+          پاک کردن
         </Link>
       </div>
       <div className="flex flex-col small:flex-row small:items-start py-6">
@@ -52,7 +52,7 @@ const SearchResultsTemplate = ({ query, hits }: SearchResultsTemplateProps) => {
             <InfiniteProducts params={params} sortBy={sortBy} />
           </>
         ) : (
-          <Text className="ml-8 small:ml-14 mt-3">No results.</Text>
+          <Text className="ml-8 small:ml-14 mt-3">بدون نتیجه</Text>
         )}
       </div>
     </div>

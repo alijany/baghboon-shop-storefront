@@ -34,13 +34,12 @@ const AccountLayout: React.FC = ({ children }) => {
           <div>
             <h3 className="text-xl-semi mb-4">سوالی دارید؟</h3>
             <span className="text-small-regular">
-            شما می توانید سوالات و پاسخ های متداول را در صفحه خدمات مشتریان ما بیابید.
+              شما می توانید سوالات و پاسخ های متداول را در صفحه خدمات مشتریان ما
+              بیابید.
             </span>
           </div>
           <div>
-            <UnderlineLink href="/customer-service">
-            خدمات مشتری
-            </UnderlineLink>
+            <UnderlineLink href="/customer-service">خدمات مشتری</UnderlineLink>
           </div>
         </div>
       </div>

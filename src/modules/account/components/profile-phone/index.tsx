@@ -74,7 +74,7 @@ const ProfilePhone: React.FC<MyInformationProps> = ({ customer }) => {
       >
         <div className="grid grid-cols-1 gap-y-2">
           <Input
-            label="Phone"
+            label="شماره تماس"
             {...register("phone", {
               required: true,
             })}

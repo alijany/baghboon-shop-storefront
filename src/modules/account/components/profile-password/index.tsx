@@ -52,9 +52,9 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
     if (!isValid) {
       setError("old_password", {
         type: "validate",
-        message: "رمز عبور قدیمی نادرست است",
+        message: "رمز عبور قدیمی نآدرست است",
       })
-      setErrorMessage("رمز عبور قدیمی نادرست است")
+      setErrorMessage("رمز عبور قدیمی نآدرست است")
 
       return
     }
@@ -94,7 +94,7 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
       >
         <div className="grid grid-cols-2 gap-4">
           <Input
-            label="Old password"
+            label="رمز عبور قبلی"
             {...register("old_password", {
               required: true,
             })}
@@ -102,13 +102,13 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
             errors={errors}
           />
           <Input
-            label="New password"
+            label="رمز عبور جدید"
             type="password"
             {...register("new_password", { required: true })}
             errors={errors}
           />
           <Input
-            label="Confirm password"
+            label="تأیید رمز عبور"
             type="password"
             {...register("confirm_password", { required: true })}
             errors={errors}

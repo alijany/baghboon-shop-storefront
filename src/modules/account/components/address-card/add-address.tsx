@@ -79,7 +79,7 @@ const AddAddress: React.FC = () => {
       })
       .catch(() => {
         setSubmitting(false)
-        setError("افزودن آدرس با شکست مواجه شد، لطفاً دوباره امتحان کنید")
+        setError("افزودن آدرس با خطا مواجه شد، لطفاً دوباره تلاش کنید")
       })
   })
 
@@ -89,19 +89,19 @@ const AddAddress: React.FC = () => {
         className="border border-ui-border-base rounded-rounded p-5 min-h-[220px] h-full w-full flex flex-col justify-between"
         onClick={open}
       >
-        <span className="text-base-semi">ادرس جدید</span>
+        <span className="text-base-semi">آدرس جدید</span>
         <Plus />
       </button>
 
       <Modal isOpen={state} close={handleClose}>
         <Modal.Title>
-          <Heading className="mb-2">اضافه کردن ادرس</Heading>
+          <Heading className="mb-2">افزودن آدرس</Heading>
         </Modal.Title>
         <Modal.Body>
           <div className="flex flex-col gap-y-2">
             <div className="grid grid-cols-2 gap-x-2">
               <Input
-                label="First name"
+                label="نام"
                 {...register("first_name", {
                   required: "وارد کردن نام الزامی است",
                 })}
@@ -110,9 +110,9 @@ const AddAddress: React.FC = () => {
                 autoComplete="given-name"
               />
               <Input
-                label="Last name"
+                label="نام خانوادگی"
                 {...register("last_name", {
-                  required: " وارد کردن نام خوانوادگی الزامی است",
+                  required: "وارد کردن نام خوانوادگی الزامی است",
                 })}
                 required
                 errors={errors}
@@ -121,23 +121,23 @@ const AddAddress: React.FC = () => {
             </div>
             <Input label="Company" {...register("company")} errors={errors} />
             <Input
-              label="Address"
+              label="آدرس"
               {...register("address_1", {
-                required: "وارد کردن ادرس لازم است",
+                required: "وارد کردن آدرس لازم است",
               })}
               required
               errors={errors}
               autoComplete="address-line1"
             />
             <Input
-              label="Apartment, suite, etc."
+              label="پلاک"
               {...register("address_2")}
               errors={errors}
               autoComplete="address-line2"
             />
             <div className="grid grid-cols-[144px_1fr] gap-x-2">
               <Input
-                label="Postal code"
+                label="کد پستی"
                 {...register("postal_code", {
                   required: " وارد کردن کد پستی الزامی است ",
                 })}
@@ -146,7 +146,7 @@ const AddAddress: React.FC = () => {
                 autoComplete="postal-code"
               />
               <Input
-                label="City"
+                label="شهر"
                 {...register("city", {
                   required: "وارد کردن شهر الزامی است",
                 })}
@@ -156,7 +156,7 @@ const AddAddress: React.FC = () => {
               />
             </div>
             <Input
-              label="Province / State"
+              label="استان / شهر"
               {...register("province")}
               errors={errors}
               autoComplete="address-level1"
@@ -166,7 +166,7 @@ const AddAddress: React.FC = () => {
               autoComplete="country"
             />
             <Input
-              label="Phone"
+              label="شماره تماس"
               {...register("phone")}
               errors={errors}
               autoComplete="phone"

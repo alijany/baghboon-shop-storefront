@@ -17,7 +17,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
     <div>
       <div className="small:hidden">
         <div className="text-xl-semi mb-4 px-8">
-           {customer?.first_name} سلام
+          {customer?.first_name} سلام
         </div>
         <div className="text-base-regular">
           <ul>
@@ -43,7 +43,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                 <>
                   <div className="flex items-center gap-x-2">
                     <MapPin size={16} />
-                    <span>ادرس ها</span>
+                    <span>آدرس ها</span>
                   </div>
                   <ChevronDown className="transform -rotate-90" />
                 </>
@@ -71,7 +71,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
         <div className="text-xl-semi flex justify-between items-start mb-4">
           <span> {customer?.first_name} سلام</span>
           <span className="text-small-regular text-gray-700">
-          وارد شده به عنوان:{" "}
+            وارد شده با:{" "}
             <span className="font-semibold">{customer?.email}</span>
           </span>
         </div>
@@ -91,7 +91,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
               </div>
 
               <div className="flex flex-col gap-y-4">
-                <h3 className="text-large-semi">ادرس ها</h3>
+                <h3 className="text-large-semi">آدرس ها</h3>
                 <div className="flex items-end gap-x-2">
                   <span className="text-3xl-semi leading-none">
                     {customer?.shipping_addresses?.length || 0}
@@ -115,13 +115,11 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                         <Link href={`/order/details/${order.id}`}>
                           <Container className="bg-gray-50 flex justify-between items-center p-4">
                             <div className="grid grid-cols-3 grid-rows-2 text-small-regular gap-x-4 flex-1">
-                              <span className="font-semibold">تاریخ قرار داده شده</span>
                               <span className="font-semibold">
-                                شماره سفارش
+                                تاریخ ایجاد
                               </span>
-                              <span className="font-semibold">
-                                مجموع سفارش
-                              </span>
+                              <span className="font-semibold">شماره سفارش</span>
+                              <span className="font-semibold">مجموع سفارش</span>
                               <span>
                                 {new Date(order.created_at).toDateString()}
                               </span>
@@ -139,7 +137,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                               onClick={close}
                             >
                               <span className="sr-only">
-                                 #{order.display_id} برو به سفارش
+                                #{order.display_id} بروز به سفارش
                               </span>
                               <ChevronDown className="-rotate-90" />
                             </button>
@@ -149,7 +147,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                     )
                   })
                 ) : (
-                  <span>اخیرا سفارشی نداده اید</span>
+                  <span>اخیرا سفارشی نداشتید</span>
                 )}
               </ul>
             </div>

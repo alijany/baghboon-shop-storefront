@@ -53,37 +53,37 @@ const Register = () => {
         عضو فروشگاه باغبون شوید
       </h1>
       <p className="text-center text-base-regular text-gray-700 mb-4">
-      پروقایل فروشگاه باغبون خود را ایجاد کنید و به یک تجربه خرید پیشرفته دسترسی داشته باشید.
-
+        پروقایل فروشگاه باغبون خود را ایجاد کنید و به یک تجربه خرید پیشرفته
+        دسترسی داشته باشید.
       </p>
       <form className="w-full flex flex-col" onSubmit={onSubmit}>
         <div className="flex flex-col w-full gap-y-2">
           <Input
-            label="First name"
+            label="نام"
             {...register("first_name", { required: "نام الزامی است." })}
             autoComplete="given-name"
             errors={errors}
           />
           <Input
-            label="Last name"
+            label="نام خانوادگی"
             {...register("last_name", { required: "نام خانوادگی الزامی است." })}
             autoComplete="family-name"
             errors={errors}
           />
           <Input
-            label="Email"
+            label="پست الکترونیک"
             {...register("email", { required: "ایمیل الزامی است" })}
             autoComplete="email"
             errors={errors}
           />
           <Input
-            label="Phone"
+            label="تلفن"
             {...register("phone")}
             autoComplete="tel"
             errors={errors}
           />
           <Input
-            label="Password"
+            label="کلمه عبور"
             {...register("password", {
               required: "رمز عبر الزامی است.",
             })}
@@ -100,18 +100,18 @@ const Register = () => {
           </div>
         )}
         <span className="text-center text-gray-700 text-small-regular mt-6">
-        با ایجاد حساب کاربری با فروشگاه باغبون موافقت می کنید{" "}
+          با ایجاد حساب کاربری در فروشگاه باغبون با{" "}
           <Link href="/content/privacy-policy" className="underline">
-          سیاست حفظ حریم خصوصی
+            سیاست حفظ حریم خصوصی
           </Link>{" "}
-          و {" "}
+          و{" "}
           <Link href="/content/terms-of-use" className="underline">
-          شرایط استفاده
+            شرایط استفاده
           </Link>
-          .
+          موافقت می کنید.
         </span>
         <Button className="mt-6 w-full" size="xlarge">
-          پیوستن
+          عضویت
         </Button>
       </form>
       <span className="text-center text-gray-700 text-small-regular mt-6">

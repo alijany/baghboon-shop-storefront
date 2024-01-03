@@ -84,7 +84,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
       })
       .catch(() => {
         setSubmitting(false)
-        setError("به روزرسانی آدرس با شکست مواجه شد، لطفاً دوباره امتحان کنید")
+        setError("بروزرسانی آدرس با خطا مواجه شد، لطفاً دوباره امتحان کنید")
       })
   })
 
@@ -147,13 +147,13 @@ const EditAddress: React.FC<EditAddressProps> = ({
 
       <Modal isOpen={state} close={close}>
         <Modal.Title>
-          <Heading className="mb-2">ویرایش ادرس</Heading>
+          <Heading className="mb-2">ویرایش آدرس</Heading>
         </Modal.Title>
         <Modal.Body>
           <div className="grid grid-cols-1 gap-y-2">
             <div className="grid grid-cols-2 gap-x-2">
               <Input
-                label="First name"
+                label="نام"
                 {...register("first_name", {
                   required: "وارد کردن نام الزامی است",
                 })}
@@ -162,7 +162,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 autoComplete="given-name"
               />
               <Input
-                label="Last name"
+                label="نام خانوادگی"
                 {...register("last_name", {
                   required: " وارد کردن نام خوانوادگی الزامی است",
                 })}
@@ -171,25 +171,25 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 autoComplete="family-name"
               />
             </div>
-            <Input label="Company" {...register("company")} errors={errors} />
+            <Input label="شرکت" {...register("company")} errors={errors} />
             <Input
-              label="Address"
+              label="آدرس"
               {...register("address_1", {
-                required: "وارد کردن ادرس لازم است",
+                required: "وارد کردن آدرس لازم است",
               })}
               required
               errors={errors}
               autoComplete="address-line1"
             />
             <Input
-              label="Apartment, suite, etc."
+              label="پلاک"
               {...register("address_2")}
               errors={errors}
               autoComplete="address-line2"
             />
             <div className="grid grid-cols-[144px_1fr] gap-x-2">
               <Input
-                label="Postal code"
+                label="کد پستی"
                 {...register("postal_code", {
                   required: " وارد کردن کد پستی الزامی است ",
                 })}
@@ -198,7 +198,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 autoComplete="postal-code"
               />
               <Input
-                label="City"
+                label="شهر"
                 {...register("city", {
                   required: "وارد کردن شهر الزامی است",
                 })}
@@ -208,7 +208,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               />
             </div>
             <Input
-              label="Province / State"
+              label="استان / شهر"
               {...register("province")}
               errors={errors}
               autoComplete="address-level1"
@@ -218,7 +218,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               autoComplete="country"
             />
             <Input
-              label="Phone"
+              label="تلفن"
               {...register("phone")}
               errors={errors}
               autoComplete="phone"

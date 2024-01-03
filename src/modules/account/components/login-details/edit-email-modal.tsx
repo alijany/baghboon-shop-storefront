@@ -72,7 +72,7 @@ const EditEmailModal: React.FC<EditEmailModalProps> = ({ customer }) => {
         <Modal.Body>
           <div className="flex flex-col w-full">
             <Input
-              label="Email"
+              label="ایمیل"
               {...register("email", {
                 required: "ایمیل الزامی است",
                 pattern: {

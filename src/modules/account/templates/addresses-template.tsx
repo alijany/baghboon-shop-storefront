@@ -13,9 +13,11 @@ const AddressesTemplate = () => {
   return (
     <div className="w-full">
       <div className="mb-8 flex flex-col gap-y-4">
-        <h1 className="text-2xl-semi">ادرس تحویل گیرنده</h1>
+        <h1 className="text-2xl-semi">آدرس ها</h1>
         <p className="text-base-regular">
-        آدرس های حمل و نقل خود را مشاهده و به روز کنید، می توانید هر تعداد که دوست دارید اضافه کنید. ذخیره آدرس‌های شما باعث می‌شود در حین تسویه حساب در دسترس باشند.
+          آدرس های خود را مشاهده و بروز کنید، می توانید هر تعداد که دوست دارید
+          آدرس اضافه کنید. با ذخیره آدرس ها می توانید در هنگام تسویه از انها را
+          انتخاب کنید
         </p>
       </div>
       <AddressBook customer={customer} />

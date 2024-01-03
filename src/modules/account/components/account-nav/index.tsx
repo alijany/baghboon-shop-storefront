@@ -18,7 +18,7 @@ const AccountNav = () => {
           >
             <>
               <ChevronDown className="transform rotate-90" />
-              <span>اکانت</span>
+              <span>حساب کاربری</span>
             </>
           </Link>
         )}
@@ -26,7 +26,7 @@ const AccountNav = () => {
       <div className="hidden small:block">
         <div>
           <div className="py-4">
-            <h3 className="text-base-semi">اکانت</h3>
+            <h3 className="text-base-semi">حساب کاربری</h3>
           </div>
           <div className="text-base-regular">
             <ul className="flex mb-0 justify-start items-start flex-col gap-y-4">
@@ -42,7 +42,7 @@ const AccountNav = () => {
               </li>
               <li>
                 <AccountNavLink href="/account/addresses" route={route!}>
-                  ادرس ها
+                  آدرس ها
                 </AccountNavLink>
               </li>
               <li>

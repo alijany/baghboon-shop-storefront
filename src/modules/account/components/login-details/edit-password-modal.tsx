@@ -61,7 +61,7 @@ const EditPasswordModal: React.FC<EditPasswordModalProps> = ({ customer }) => {
       })
 
     if (!passwordMatches) {
-      setError("رمزعبور قدیمی درست نیست")
+      setError("رمزعبور قبلی درست نیست")
       setSubmitting(false)
       return
     }
@@ -90,20 +90,20 @@ const EditPasswordModal: React.FC<EditPasswordModalProps> = ({ customer }) => {
     <div>
       <EditButton onClick={open} />
       <Modal isOpen={state} close={close}>
-        <Modal.Title>اپدیت کردن رمزعبور</Modal.Title>
+        <Modal.Title>بروزرسانی رمزعبور</Modal.Title>
         <Modal.Body>
           <div className="flex flex-col gap-y-8">
             <Input
-              label="Old password"
+              label="رمز قبلی"
               {...register("old_password", {
-                required: "رمزعبور قدیمی الزامی است ",
+                required: "رمزعبور قبلی الزامی است",
               })}
               type="password"
               autoComplete="password"
               errors={errors}
             />
             <Input
-              label="New password"
+              label="رمز جدید"
               {...register("new_password", {
                 required: "رمزعبور جدید الزامی است",
               })}

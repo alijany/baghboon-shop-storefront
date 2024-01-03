@@ -59,7 +59,7 @@ const AccountInfo = ({
             onClick={handleToggle}
             type={state ? "reset" : "button"}
           >
-            {state ? "Cancel" : "Edit"}
+            {state ? "لغو" : "ویرایش"}
           </Button>
         </div>
       </div>

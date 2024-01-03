@@ -64,7 +64,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             htmlFor={name}
             onClick={() => inputRef.current?.focus()}
             className={clsx(
-              "flex items-center justify-center mx-3 px-1 transition-all absolute duration-300 top-3 -z-1 origin-0 text-gray-500",
+              "flex items-center mx-3 px-1 transition-all absolute duration-300 top-3 right-0 -z-1 origin-0 text-gray-500",
               {
                 "!text-rose-500": hasError,
               }
@@ -77,7 +77,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="text-ui-fg-subtle px-4 focus:outline-none transition-all duration-150 outline-none focus:text-gray-700 absolute right-0 top-3"
+              className="text-ui-fg-subtle px-4 focus:outline-none transition-all duration-150 outline-none focus:text-gray-700 absolute left-0 top-3"
             >
               {showPassword ? <Eye /> : <EyeOff />}
             </button>

@@ -71,7 +71,7 @@ const Register = () => {
             errors={errors}
           />
           <Input
-            label="پست الکترونیک"
+            label="ایمیل"
             {...register("email", { required: "ایمیل الزامی است" })}
             autoComplete="email"
             errors={errors}

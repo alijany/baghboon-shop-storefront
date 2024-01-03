@@ -37,7 +37,7 @@ const AccountNav = () => {
               </li>
               <li>
                 <AccountNavLink href="/account/profile" route={route!}>
-                  پروقایل
+                  پروفایل
                 </AccountNavLink>
               </li>
               <li>

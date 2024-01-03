@@ -119,7 +119,7 @@ const AddAddress: React.FC = () => {
                 autoComplete="family-name"
               />
             </div>
-            <Input label="Company" {...register("company")} errors={errors} />
+            <Input label="شرکت" {...register("company")} errors={errors} />
             <Input
               label="آدرس"
               {...register("address_1", {

@@ -52,7 +52,7 @@ const Login = () => {
       <form className="w-full" onSubmit={onSubmit}>
         <div className="flex flex-col w-full gap-y-2">
           <Input
-            label="پست الکترونیک"
+            label="ایمیل"
             {...register("email", { required: "وارد کردن ایمیل الزامی است" })}
             autoComplete="email"
             errors={errors}

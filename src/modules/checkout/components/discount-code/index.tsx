@@ -185,9 +185,9 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
             </Label>
             <div className="flex w-full gap-x-2 items-center">
               <Input
-                label="Please enter code"
+                label="لطفا کد کارت هدیه را وارد کنید"
                 {...register("discount_code", {
-                  required: "Code is required",
+                  required: "کد اجباری است",
                 })}
                 errors={errors}
               />

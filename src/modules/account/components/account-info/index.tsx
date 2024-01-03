@@ -23,7 +23,7 @@ const AccountInfo = ({
   isSuccess,
   isError,
   clearState,
-  errorMessage = "An error occurred, please try again",
+  errorMessage = "خطایی رخ داده است، لطفاً دوباره تلاش کنید",
   children,
 }: AccountInfoProps) => {
   const { state, close, toggle } = useToggleState()
@@ -77,7 +77,7 @@ const AccountInfo = ({
           )}
         >
           <Badge className="p-2 my-4" color="green">
-            <span>{label} updated succesfully</span>
+            <span>با موفقیت بروز شد {label}</span>
           </Badge>
         </Disclosure.Panel>
       </Disclosure>
@@ -119,7 +119,7 @@ const AccountInfo = ({
                 className="w-full small:max-w-[140px]"
                 type="submit"
               >
-                Save changes
+                ذخیره تغییرات
               </Button>
             </div>
           </div>

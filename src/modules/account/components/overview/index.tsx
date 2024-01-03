@@ -17,7 +17,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
     <div>
       <div className="small:hidden">
         <div className="text-xl-semi mb-4 px-8">
-          Hello {customer?.first_name}
+           {customer?.first_name} سلام
         </div>
         <div className="text-base-regular">
           <ul>
@@ -29,7 +29,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                 <>
                   <div className="flex items-center gap-x-2">
                     <User size={16} />
-                    <span>Profile</span>
+                    <span>پروفایل</span>
                   </div>
                   <ChevronDown className="transform -rotate-90" />
                 </>
@@ -43,7 +43,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                 <>
                   <div className="flex items-center gap-x-2">
                     <MapPin size={16} />
-                    <span>Addresses</span>
+                    <span>ادرس ها</span>
                   </div>
                   <ChevronDown className="transform -rotate-90" />
                 </>
@@ -57,7 +57,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                 <>
                   <div className="flex items-center gap-x-2">
                     <Package size={16} />
-                    <span>Orders</span>
+                    <span>سفارش ها</span>
                   </div>
                   <ChevronDown className="transform -rotate-90" />
                 </>
@@ -69,9 +69,9 @@ const Overview = ({ orders, customer }: OverviewProps) => {
 
       <div className="hidden small:block">
         <div className="text-xl-semi flex justify-between items-start mb-4">
-          <span>Hello {customer?.first_name}</span>
+          <span> {customer?.first_name} سلام</span>
           <span className="text-small-regular text-gray-700">
-            Signed in as:{" "}
+          وارد شده به عنوان:{" "}
             <span className="font-semibold">{customer?.email}</span>
           </span>
         </div>
@@ -79,19 +79,19 @@ const Overview = ({ orders, customer }: OverviewProps) => {
           <div className="flex flex-col gap-y-4 h-full col-span-1 row-span-2 flex-1">
             <div className="flex items-start gap-x-16 mb-6">
               <div className="flex flex-col gap-y-4">
-                <h3 className="text-large-semi">Profile</h3>
+                <h3 className="text-large-semi">پروفایل</h3>
                 <div className="flex items-end gap-x-2">
                   <span className="text-3xl-semi leading-none">
                     {getProfileCompletion(customer)}%
                   </span>
                   <span className="uppercase text-base-regular text-gray-500">
-                    Completed
+                    تکمیل شده
                   </span>
                 </div>
               </div>
 
               <div className="flex flex-col gap-y-4">
-                <h3 className="text-large-semi">Addresses</h3>
+                <h3 className="text-large-semi">ادرس ها</h3>
                 <div className="flex items-end gap-x-2">
                   <span className="text-3xl-semi leading-none">
                     {customer?.shipping_addresses?.length || 0}
@@ -105,7 +105,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
 
             <div className="flex flex-col gap-y-4">
               <div className="flex items-center gap-x-2">
-                <h3 className="text-large-semi">Recent orders</h3>
+                <h3 className="text-large-semi">سفارش های اخیر</h3>
               </div>
               <ul className="flex flex-col gap-y-4">
                 {orders ? (
@@ -115,12 +115,12 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                         <Link href={`/order/details/${order.id}`}>
                           <Container className="bg-gray-50 flex justify-between items-center p-4">
                             <div className="grid grid-cols-3 grid-rows-2 text-small-regular gap-x-4 flex-1">
-                              <span className="font-semibold">Date placed</span>
+                              <span className="font-semibold">تاریخ قرار داده شده</span>
                               <span className="font-semibold">
-                                Order number
+                                شماره سفارش
                               </span>
                               <span className="font-semibold">
-                                Total amount
+                                مجموع سفارش
                               </span>
                               <span>
                                 {new Date(order.created_at).toDateString()}
@@ -139,7 +139,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                               onClick={close}
                             >
                               <span className="sr-only">
-                                Go to order #{order.display_id}
+                                 #{order.display_id} برو به سفارش
                               </span>
                               <ChevronDown className="-rotate-90" />
                             </button>
@@ -149,7 +149,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                     )
                   })
                 ) : (
-                  <span>No recent orders</span>
+                  <span>اخیرا سفارشی نداده اید</span>
                 )}
               </ul>
             </div>

@@ -1,13 +1,12 @@
 import { medusaClient } from "@lib/config"
 import { useAccount } from "@lib/context/account-context"
 import useToggleState from "@lib/hooks/use-toggle-state"
-import { Address } from "@medusajs/medusa"
-import CountrySelect from "@modules/checkout/components/country-select"
-import { Button, Heading, Text } from "@medusajs/ui"
 import { PencilSquare as Edit, Trash } from "@medusajs/icons"
+import { Address } from "@medusajs/medusa"
+import { Button, Heading, Text } from "@medusajs/ui"
+import CountrySelect from "@modules/checkout/components/country-select"
 import Input from "@modules/common/components/input"
 import Modal from "@modules/common/components/modal"
-import Spinner from "@modules/common/icons/spinner"
 import clsx from "clsx"
 import React, { useState } from "react"
 import { useForm } from "react-hook-form"
@@ -85,7 +84,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
       })
       .catch(() => {
         setSubmitting(false)
-        setError("Failed to update address, please try again.")
+        setError("به روزرسانی آدرس با شکست مواجه شد، لطفاً دوباره امتحان کنید")
       })
   })
 
@@ -134,21 +133,21 @@ const EditAddress: React.FC<EditAddressProps> = ({
             onClick={open}
           >
             <Edit />
-            Edit
+            ویرایش
           </button>
           <button
             className="text-small-regular text-gray-700 flex items-center gap-x-2"
             onClick={removeAddress}
           >
             <Trash />
-            Remove
+            حذف
           </button>
         </div>
       </div>
 
       <Modal isOpen={state} close={close}>
         <Modal.Title>
-          <Heading className="mb-2">Edit address</Heading>
+          <Heading className="mb-2">ویرایش ادرس</Heading>
         </Modal.Title>
         <Modal.Body>
           <div className="grid grid-cols-1 gap-y-2">
@@ -156,7 +155,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               <Input
                 label="First name"
                 {...register("first_name", {
-                  required: "First name is required",
+                  required: "وارد کردن نام الزامی است",
                 })}
                 required
                 errors={errors}
@@ -165,7 +164,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               <Input
                 label="Last name"
                 {...register("last_name", {
-                  required: "Last name is required",
+                  required: " وارد کردن نام خوانوادگی الزامی است",
                 })}
                 required
                 errors={errors}
@@ -176,7 +175,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
             <Input
               label="Address"
               {...register("address_1", {
-                required: "Address is required",
+                required: "وارد کردن ادرس لازم است",
               })}
               required
               errors={errors}
@@ -192,7 +191,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               <Input
                 label="Postal code"
                 {...register("postal_code", {
-                  required: "Postal code is required",
+                  required: " وارد کردن کد پستی الزامی است ",
                 })}
                 required
                 errors={errors}
@@ -201,7 +200,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               <Input
                 label="City"
                 {...register("city", {
-                  required: "City is required",
+                  required: "وارد کردن شهر الزامی است",
                 })}
                 errors={errors}
                 required
@@ -232,10 +231,10 @@ const EditAddress: React.FC<EditAddressProps> = ({
         <Modal.Footer>
           <div className="flex gap-3 mt-4">
             <Button variant="secondary" onClick={close} disabled={submitting}>
-              Cancel
+              لغو
             </Button>
             <Button className="min-h-0" onClick={submit} isLoading={submitting}>
-              Save
+              ذخیره
             </Button>
           </div>
         </Modal.Footer>

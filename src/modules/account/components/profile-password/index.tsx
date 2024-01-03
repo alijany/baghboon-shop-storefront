@@ -52,9 +52,9 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
     if (!isValid) {
       setError("old_password", {
         type: "validate",
-        message: "Old password is incorrect",
+        message: "رمز عبور قدیمی نادرست است",
       })
-      setErrorMessage("Old password is incorrect")
+      setErrorMessage("رمز عبور قدیمی نادرست است")
 
       return
     }
@@ -62,9 +62,9 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
     if (data.new_password !== data.confirm_password) {
       setError("confirm_password", {
         type: "validate",
-        message: "Passwords do not match",
+        message: "رمزهای ورود مطابقت ندارند",
       })
-      setErrorMessage("Passwords do not match")
+      setErrorMessage("رمزهای ورود مطابقت ندارند")
 
       return
     }
@@ -82,9 +82,9 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
       className="w-full"
     >
       <AccountInfo
-        label="Password"
+        label="رمز عبور"
         currentInfo={
-          <span>The password is not shown for security reasons</span>
+          <span>رمز عبور به دلایل امنیتی نشان داده نمی شود</span>
         }
         isLoading={isLoading}
         isSuccess={isSuccess}

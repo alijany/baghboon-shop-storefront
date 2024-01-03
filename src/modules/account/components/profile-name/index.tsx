@@ -75,7 +75,7 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
       className="w-full overflow-visible"
     >
       <AccountInfo
-        label="Name"
+        label="نام"
         currentInfo={`${customer.first_name} ${customer.last_name}`}
         isLoading={isLoading}
         isSuccess={isSuccess}

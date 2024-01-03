@@ -65,7 +65,7 @@ const ProfilePhone: React.FC<MyInformationProps> = ({ customer }) => {
   return (
     <form onSubmit={handleSubmit(updatePhone)} className="w-full">
       <AccountInfo
-        label="Phone"
+        label="تلفن"
         currentInfo={`${customer.phone}`}
         isLoading={isLoading}
         isSuccess={isSuccess}

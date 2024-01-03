@@ -50,29 +50,29 @@ const Register = () => {
         </div>
       )}
       <h1 className="text-large-semi uppercase mb-6">
-        Become a Medusa Store Member
+        عضو فروشگاه باغبون شوید
       </h1>
       <p className="text-center text-base-regular text-gray-700 mb-4">
-        Create your Medusa Store Member profile, and get access to an enhanced
-        shopping experience.
+      پروقایل فروشگاه باغبون خود را ایجاد کنید و به یک تجربه خرید پیشرفته دسترسی داشته باشید.
+
       </p>
       <form className="w-full flex flex-col" onSubmit={onSubmit}>
         <div className="flex flex-col w-full gap-y-2">
           <Input
             label="First name"
-            {...register("first_name", { required: "First name is required" })}
+            {...register("first_name", { required: "نام الزامی است." })}
             autoComplete="given-name"
             errors={errors}
           />
           <Input
             label="Last name"
-            {...register("last_name", { required: "Last name is required" })}
+            {...register("last_name", { required: "نام خانوادگی الزامی است." })}
             autoComplete="family-name"
             errors={errors}
           />
           <Input
             label="Email"
-            {...register("email", { required: "Email is required" })}
+            {...register("email", { required: "ایمیل الزامی است" })}
             autoComplete="email"
             errors={errors}
           />
@@ -85,7 +85,7 @@ const Register = () => {
           <Input
             label="Password"
             {...register("password", {
-              required: "Password is required",
+              required: "رمز عبر الزامی است.",
             })}
             type="password"
             autoComplete="new-password"
@@ -95,32 +95,32 @@ const Register = () => {
         {authError && (
           <div>
             <span className="text-rose-500 w-full text-small-regular">
-              These credentials do not match our records
+              مشخصات وارد شده معتبر نیست
             </span>
           </div>
         )}
         <span className="text-center text-gray-700 text-small-regular mt-6">
-          By creating an account, you agree to Medusa Store&apos;s{" "}
+        با ایجاد حساب کاربری با فروشگاه باغبون موافقت می کنید{" "}
           <Link href="/content/privacy-policy" className="underline">
-            Privacy Policy
+          سیاست حفظ حریم خصوصی
           </Link>{" "}
-          and{" "}
+          و {" "}
           <Link href="/content/terms-of-use" className="underline">
-            Terms of Use
+          شرایط استفاده
           </Link>
           .
         </span>
         <Button className="mt-6 w-full" size="xlarge">
-          Join
+          پیوستن
         </Button>
       </form>
       <span className="text-center text-gray-700 text-small-regular mt-6">
-        Already a member?{" "}
+        قبلا عضو شده اید؟{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.SIGN_IN)}
           className="underline"
         >
-          Sign in
+          ورود
         </button>
         .
       </span>

@@ -97,7 +97,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                     {customer?.shipping_addresses?.length || 0}
                   </span>
                   <span className="uppercase text-base-regular text-gray-500">
-                    Saved
+                    ذخیره شده
                   </span>
                 </div>
               </div>

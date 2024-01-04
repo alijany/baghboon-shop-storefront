@@ -32,7 +32,7 @@ export const paymentInfoMap: Record<
     icon: <Bancontact />,
   },
   manual: {
-    title: "پرداخت آزمون",
+    title: "تعیین نشده",
     icon: <CreditCard />,
   },
   // Add more payment providers here
@@ -239,7 +239,7 @@ const Payment = () => {
                   <Text>
                     {cart.payment_session.provider_id === "stripe"
                       ? "**** **** **** ****"
-                      : "مرحله بعدی مشخص خواهد شد"}
+                      : "در مراحل بعدی مشخص خواهد شد"}
                   </Text>
                 </div>
               </div>

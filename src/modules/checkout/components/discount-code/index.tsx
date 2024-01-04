@@ -179,7 +179,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
           <form onSubmit={handleSubmit(onApply)} className="w-full">
             <Label className="flex gap-x-1 mb-2">
               کارت هدیه یا کد تخفیف؟
-              <Tooltip content="You can add multiple gift cards, but only one discount code.">
+              <Tooltip content="می توانید چندین کارت هدیه اضافه کنید، اما فقط یک کد تخفیف می توانید وارد کنید.">
                 <InformationCircleSolid color="var(--fg-muted)" />
               </Tooltip>
             </Label>
@@ -198,7 +198,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                 className="!min-h-[0] h-10"
                 isLoading={isLoading}
               >
-                اعمال کردن
+                اعمال
               </Button>
             </div>
           </form>

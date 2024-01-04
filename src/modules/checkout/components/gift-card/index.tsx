@@ -108,7 +108,7 @@ const GiftCard: React.FC<GiftCardProps> = ({ cart }) => {
                   disabled={isLoading}
                   isLoading={isLoading}
                 >
-                 اعمال کردن
+                 اعمال
                 </Button>
               </div>
             </div>

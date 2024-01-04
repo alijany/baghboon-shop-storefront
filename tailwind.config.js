@@ -58,16 +58,11 @@ module.exports = {
         "3xl": "2rem",
       },
       fontFamily: {
-        sans: [
-          "Inter",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Ubuntu",
-          "sans-serif",
-        ],
+        sans: ["Yekan Bakh"],
+        serif: ["Yekan Bakh"],
+        mono: ["Yekan Bakh"],
+        display: ["Yekan Bakh"],
+        body: ["Yekan Bakh"],
       },
       keyframes: {
         ring: {

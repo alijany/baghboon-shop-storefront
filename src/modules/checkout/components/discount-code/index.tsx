@@ -43,7 +43,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
         })}`
 
       default:
-        return "Free shipping"
+        return "ارسال رایگان"
     }
   }, [discounts, region])
 
@@ -84,7 +84,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
           setError(
             "discount_code",
             {
-              message: "Code is invalid",
+              message: "کد نامعتبر است",
             },
             {
               shouldFocus: true,
@@ -126,14 +126,14 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
       <div className="txt-medium">
         {gift_cards.length > 0 && (
           <div className="flex flex-col mb-4">
-            <Heading className="txt-medium">Gift card(s) applied:</Heading>
+            <Heading className="txt-medium">کارت(های) هدیه اعمال شده:</Heading>
             {gift_cards?.map((gc) => (
               <div
                 className="flex items-center justify-between txt-small-plus"
                 key={gc.id}
               >
                 <Text className="flex gap-x-1 items-baseline">
-                  <span>Code: </span>
+                  <span>کد:</span>
                   <span className="truncate">{gc.code}</span>
                 </Text>
                 <Text className="font-semibold">
@@ -145,7 +145,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                   disabled={isLoading}
                 >
                   <Trash size={14} />
-                  <span className="sr-only">Remove gift card from order</span>
+                  <span className="sr-only">حذف کارت هدیه از سفارش</span>
                 </button>
               </div>
             ))}
@@ -155,10 +155,10 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
         {appliedDiscount ? (
           <div className="w-full flex items-center">
             <div className="flex flex-col w-full">
-              <Heading className="txt-medium">Discount applied:</Heading>
+              <Heading className="txt-medium">تخفیف اعمال شده:</Heading>
               <div className="flex items-center justify-between w-full max-w-full">
                 <Text className="flex gap-x-1 items-baseline txt-small-plus w-4/5 pr-1">
-                  <span>Code:</span>
+                  <span>کد:</span>
                   <span className="truncate">{discounts[0].code}</span>
                   <span className="min-w-fit">({appliedDiscount})</span>
                 </Text>
@@ -169,7 +169,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                 >
                   <Trash size={14} />
                   <span className="sr-only">
-                    Remove discount code from order
+                    حذف کد تخفیف از سفارش
                   </span>
                 </button>
               </div>
@@ -178,16 +178,16 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
         ) : (
           <form onSubmit={handleSubmit(onApply)} className="w-full">
             <Label className="flex gap-x-1 mb-2">
-              Gift card or discount code?
-              <Tooltip content="You can add multiple gift cards, but only one discount code.">
+              کارت هدیه یا کد تخفیف؟
+              <Tooltip content="می توانید چندین کارت هدیه اضافه کنید، اما فقط یک کد تخفیف می توانید وارد کنید.">
                 <InformationCircleSolid color="var(--fg-muted)" />
               </Tooltip>
             </Label>
             <div className="flex w-full gap-x-2 items-center">
               <Input
-                label="Please enter code"
+                label="لطفا کد کارت هدیه را وارد کنید"
                 {...register("discount_code", {
-                  required: "Code is required",
+                  required: "کد اجباری است",
                 })}
                 errors={errors}
               />
@@ -198,7 +198,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                 className="!min-h-[0] h-10"
                 isLoading={isLoading}
               >
-                Apply
+                اعمال
               </Button>
             </div>
           </form>

@@ -21,16 +21,16 @@ const CheckoutTemplate = () => {
               <>
                 <ChevronDown className="rotate-90" size={16} />
                 <span className="mt-px hidden small:block txt-compact-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase">
-                  Back to shopping cart
+                  بازگشت به سبد خرید
                 </span>
-                <span className="mt-px block small:hidden">Back</span>
+                <span className="mt-px block small:hidden">بازگشت</span>
               </>
             </Link>
             <Link
               href="/"
               className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             >
-              Medusa Store
+              باغبون شاپ
             </Link>
             <div className="flex-1 basis-0" />
           </nav>

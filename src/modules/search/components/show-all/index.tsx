@@ -13,16 +13,16 @@ const ShowAll = ({ close }: { close: () => void }) => {
   if (hits.length === 0) {
     return (
       <Container className="flex gap-2 justify-center h-fit py-2">
-        <Text>No results found.</Text>
+        <Text>نتیجه ای پیدا نشد.</Text>
       </Container>
     )
   }
 
   return (
     <Container className="flex flex-col small:flex-row gap-2 justify-center items-center h-fit py-4 small:py-2">
-      <Text>Showing the first 6 results.</Text>
+      <Text>6 نتیجه اول را نشان بده.</Text>
       <InteractiveLink href={`/search/${query}`} onClick={close}>
-        View all
+        نمایش همه
       </InteractiveLink>
     </Container>
   )

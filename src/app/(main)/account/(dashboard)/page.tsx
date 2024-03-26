@@ -2,8 +2,8 @@ import OverviewTemplate from "@modules/account/templates/overview-template"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Account",
-  description: "Overview of your account activity.",
+  title: "حساب کاربری",
+  description: "نمای کلی از فعالیت حساب شما.",
 }
 
 export default function Account() {

@@ -16,12 +16,11 @@ const SubmitSpinner = () => {
           <div className="flex items-center gap-x-3">
             <Spinner className="animate-spin" />
             <Heading className="text-gray-900 text-2xl font-medium">
-              Please wait...
+              لطفا صبر کنید...
             </Heading>
           </div>
           <Text>
-            Your order is processing. Do not press back or refresh until your
-            order is complete.
+            سفارش شما در حال پردازش است. لطفا تا تکمیل شدن ثبت سفارش صبر کنید
           </Text>
         </div>
       </div>

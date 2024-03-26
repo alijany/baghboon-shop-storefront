@@ -38,7 +38,7 @@ const CollectionFilter = ({
 
   return (
     <FilterRadioGroup
-      title="Collections"
+      title="مجموعه ها"
       items={collectionMap}
       value={collectionId}
       handleChange={handleCollectionChange}

@@ -19,14 +19,14 @@ const FooterNav = () => {
               href="/"
               className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             >
-              Medusa Store
+              باغبون شاپ
             </Link>
           </div>
           <div className="text-small-regular grid grid-cols-3 gap-x-10 md:gap-x-16">
             {product_categories && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
-                  Categories
+                  دسته بندی ها
                 </span>
                 <ul className="grid grid-cols-1 gap-2">
                   {product_categories?.slice(0, 6).map((c) => {
@@ -79,7 +79,7 @@ const FooterNav = () => {
             {collections && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
-                  Collections
+                  مجموعه ها
                 </span>
                 <ul
                   className={clsx(
@@ -103,7 +103,7 @@ const FooterNav = () => {
               </div>
             )}
             <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
+              <span className="txt-small-plus txt-ui-fg-base">باغبون شاپ</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
                   <a
@@ -122,7 +122,7 @@ const FooterNav = () => {
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
                   >
-                    Documentation
+                    مستندات
                   </a>
                 </li>
                 <li>
@@ -132,7 +132,7 @@ const FooterNav = () => {
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
                   >
-                    Source code
+                    کد منبع
                   </a>
                 </li>
               </ul>
@@ -141,7 +141,7 @@ const FooterNav = () => {
         </div>
         <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
           <Text className="txt-compact-small">
-            © {new Date().getFullYear()} Medusa Store. All rights reserved.
+            © {new Date().getFullYear()} باغبون شاپ. تمام حقوق محفوظ است.
           </Text>
           <MedusaCTA />
         </div>

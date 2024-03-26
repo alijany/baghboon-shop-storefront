@@ -46,7 +46,7 @@ const FilterCollections = ({
 
   return (
     <div className="flex gap-x-3 small:flex-col small:gap-y-3">
-      <span className="text-base-semi">Collections</span>
+      <span className="text-base-semi">مجموعه ها</span>
       <ul className="text-base-regular flex items-center gap-x-4 small:grid small:grid-cols-1 small:gap-y-2">
         {collections?.map((c) => (
           <li key={c.id}>

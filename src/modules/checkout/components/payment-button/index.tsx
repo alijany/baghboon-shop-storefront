@@ -35,7 +35,7 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({ paymentSession }) => {
         <PayPalPaymentButton notReady={notReady} session={paymentSession} />
       )
     default:
-      return <Button disabled>Select a payment method</Button>
+      return <Button disabled>یک روش پرداخت را انتخاب کنید</Button>
   }
 }
 
@@ -127,7 +127,7 @@ const StripePaymentButton = ({
         size="large"
         isLoading={submitting}
       >
-        Place order
+        ثبت سفارش
       </Button>
       {errorMessage && (
         <div className="text-red-500 text-small-regular mt-2">
@@ -163,13 +163,15 @@ const PayPalPaymentButton = ({
       ?.authorize()
       .then((authorization) => {
         if (authorization.status !== "COMPLETED") {
-          setErrorMessage(`An error occurred, status: ${authorization.status}`)
+          setErrorMessage(`خطایی رخ داد ، وضعیت: ${authorization.status}`)
           return
         }
         onPaymentCompleted()
       })
       .catch(() => {
-        setErrorMessage(`An unknown error occurred, please try again.`)
+        setErrorMessage(
+          `یک خطای ناشناخته رخ داده است ، لطفاً دوباره امتحان کنید.`
+        )
       })
       .finally(() => {
         setSubmitting(false)
@@ -216,7 +218,7 @@ const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
       onClick={handlePayment}
       size="large"
     >
-      Place order
+      ثبت سفارش
     </Button>
   )
 }

@@ -45,21 +45,23 @@ const Login = () => {
           <Spinner />
         </div>
       )}
-      <h1 className="text-large-semi uppercase mb-6">Welcome back</h1>
+      <h1 className="text-large-semi uppercase mb-6">خوش آمدید</h1>
       <p className="text-center text-base-regular text-gray-700 mb-8">
-        Sign in to access an enhanced shopping experience.
+        برای تجربه خریدی بهتر لطفا وارد حساب کاربری خود شوید
       </p>
       <form className="w-full" onSubmit={onSubmit}>
         <div className="flex flex-col w-full gap-y-2">
           <Input
-            label="Email"
-            {...register("email", { required: "Email is required" })}
+            label="ایمیل"
+            {...register("email", { required: "وارد کردن ایمیل الزامی است" })}
             autoComplete="email"
             errors={errors}
           />
           <Input
-            label="Password"
-            {...register("password", { required: "Password is required" })}
+            label="کلمه عبور"
+            {...register("password", {
+              required: "وارد کردن کلمه عبور الزامی است",
+            })}
             type="password"
             autoComplete="current-password"
             errors={errors}
@@ -68,21 +70,21 @@ const Login = () => {
         {authError && (
           <div>
             <span className="text-rose-500 w-full text-small-regular">
-              These credentials do not match our records
+              کاربری با این مشخصات وجود ندارد
             </span>
           </div>
         )}
         <Button className="mt-6 w-full" size="large">
-          Enter
+          ورود
         </Button>
       </form>
       <span className="text-center text-gray-700 text-small-regular mt-6">
-        Not a member?{" "}
+        عضو نیستید?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.REGISTER)}
           className="underline"
         >
-          Join us
+          عضویت
         </button>
         .
       </span>

@@ -20,19 +20,19 @@ export const paymentInfoMap: Record<
   { title: string; icon: JSX.Element }
 > = {
   stripe: {
-    title: "Credit card",
+    title: "کارت اعتباری",
     icon: <CreditCard />,
   },
   "stripe-ideal": {
-    title: "iDeal",
+    title: "پرداخت حضوری",
     icon: <Ideal />,
   },
   "stripe-bancontact": {
-    title: "Bancontact",
+    title: "پرداخت با فیش",
     icon: <Bancontact />,
   },
   manual: {
-    title: "Test payment",
+    title: "تعیین نشده",
     icon: <CreditCard />,
   },
   // Add more payment providers here
@@ -109,7 +109,7 @@ const Payment = () => {
               {
                 type: "validate",
                 message:
-                  "An error occurred while selecting this payment method. Please try again.",
+                  "هنگام انتخاب این روش پرداخت ، خطایی روی داد.لطفا دوباره تلاش کنید.",
               },
               { shouldFocus: true }
             ),
@@ -131,13 +131,13 @@ const Payment = () => {
             }
           )}
         >
-          Payment
+          پرداخت
           {!isOpen && paymentReady && <CheckCircleSolid />}
         </Heading>
         {!isOpen && addressReady && shippingReady && (
           <Text>
             <button onClick={handleEdit} className="text-ui-fg-interactive">
-              Edit
+              ویرایش
             </button>
           </Text>
         )}
@@ -198,7 +198,7 @@ const Payment = () => {
               }
               isLoading={settingPaymentSession}
             >
-              Continue to review
+              بازبینی  و نهایی سازی سفارش
             </Button>
           </div>
         ) : (
@@ -212,7 +212,7 @@ const Payment = () => {
             <div className="flex items-start gap-x-1 w-full">
               <div className="flex flex-col w-1/3">
                 <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                  Payment method
+                  روش پرداخت
                 </Text>
                 <Text className="txt-medium text-ui-fg-subtle">
                   {paymentInfoMap[cart.payment_session.provider_id]?.title ||
@@ -228,7 +228,7 @@ const Payment = () => {
               </div>
               <div className="flex flex-col w-1/3">
                 <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                  Payment details
+                  جزئیات پرداخت
                 </Text>
                 <div className="flex gap-2 txt-medium text-ui-fg-subtle items-center">
                   <Container className="flex items-center h-7 w-fit p-2 bg-ui-button-neutral-hover">
@@ -239,7 +239,7 @@ const Payment = () => {
                   <Text>
                     {cart.payment_session.provider_id === "stripe"
                       ? "**** **** **** ****"
-                      : "Another step will appear"}
+                      : "در مراحل بعدی مشخص خواهد شد"}
                   </Text>
                 </div>
               </div>
